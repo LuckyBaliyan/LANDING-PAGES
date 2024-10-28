@@ -1,0 +1,400 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "gilroy";
+}
+
+html,body{
+    width:100%;
+    height:100vh;
+}
+
+.main{
+    width:100%;
+    max-width:1920px;
+    height:100vh;
+    background-color: black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+   /* background-color:hsl(346deg 17% 70%);*/
+    background-color: hsl(343, 12%, 54%);
+    position:relative;
+    overflow: hidden;
+}
+.sub-main{
+    width:78%;
+    height:80%;
+    background-color:hsl(341, 18%, 79%);
+    display:flex;
+    position: relative;
+    overflow:hidden;
+}
+.sub-main .nav{
+    padding-top:40px;
+    padding-left:20px;
+    position: absolute;
+    left:30px;
+}
+.nav{
+    display:flex;
+    justify-content:space-between;
+    width:33%;
+}
+.left,.right{
+    position:relative;
+    overflow: hidden;
+    z-index:4;
+}
+.left i{
+   color:white;
+   font-size:2.3rem;
+   font-weight:500;
+   position:relative;
+   top:0%;
+   animation:sample9 4s linear forwards;
+   transition: all 1s linear;
+}
+
+@keyframes sample9 {
+    0%{
+        /*left:100%;*/
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(180deg);
+    }
+    100%{
+       /* left:0%;*/
+        transform: rotateZ(360deg);
+    }
+}
+
+.right span{
+     font-size:2rem;
+     letter-spacing: 2px;
+     line-height: .9;
+     font-family:"Dancing Script", cursive;
+     color:white;
+     font-weight:700;
+     position:relative;
+     top:100%;
+     z-index: 2;
+     animation:sample1 2s ease-in-out forwards;
+     transition:all 1.3s ease-in-out;
+     -webkit-text-stroke-width:.1px;
+     -webkit-text-stroke-color:#000;
+}
+/*
+.left i::after{
+    content:" ";
+    position:absolute;
+    top:-10%;
+    left:0%;
+    width:10%;
+    height:130%;
+    background-color:hsl(341, 18%, 79%);
+    animation:sample1 1.4s ease-in-out forwards;
+}
+
+.run-again{
+    animation-delay:5s;
+}
+
+.right span::after{
+    content:"";
+    position:absolute;
+    top:0%;
+    left:0%;
+    width:100%;
+    height:0%;
+    background-color:hsl(341, 18%, 79%);
+    animation:sample2 1.4s ease-in-out forwards;
+}
+*/
+@keyframes sample1 {
+    0%{
+        opacity:0
+    }
+    50%{
+        opacity:.6;
+    }
+    100%{
+        top:0%;
+        opacity:1;
+    }
+}
+/*
+@keyframes sample2 {
+    from{
+        height:100%;
+    }
+    to{
+        height:0%;
+    }
+}
+*/
+.img-container{
+    width:57%;
+    height:100%;
+    position:absolute;
+    left:30%;
+    background-image: url(images/portrait-young-japanese-woman-with-jacket.jpg);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    position:relative;
+}
+
+.img-container::before{
+    content:"";
+    position:absolute;
+    top:0%;
+    left:0%;
+    width:0%;
+    height:100%;
+    background:hsl(341, 18%, 79%);
+    animation-delay: 3s;
+    animation:sample2 4s ease-in-out forwards;
+}
+
+
+@keyframes sample2 {
+    0%{
+        width:100%;
+    }
+    100%{
+        width:0%;
+    }
+}
+
+.overlay{
+    width:70%;
+    height:65%;
+    position:absolute;
+    top:55%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 18px;
+    overflow: hidden;
+}
+
+.img2-container img{
+    width:240px;
+    height:280px;
+    object-fit: cover;
+    transition: all 1s ease;
+    animation:sample8 3s ease-in-out forwards;
+    animation-delay: .3s;
+    filter:brightness(90%) saturate(100%)  contrast(100%);
+    position:relative;
+}
+
+.img2-container img:hover{
+    filter:brightness(130%);
+    width:800px;
+    height:800px;
+    box-shadow: 0 0 10px black;
+    border-radius:100%;
+    opacity:.6;
+    cursor:grab;
+}
+
+@keyframes sample8 {
+    0%{
+        opacity:0;
+        transform: scale(0);
+    }
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }   
+}
+
+.content-container{
+    padding-top:50px;
+    position: relative;
+}
+
+
+.content-container div h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:5.5vw;
+    color:white;
+    font-weight:700;
+    letter-spacing: 3px;
+    width:487px;
+    text-transform: uppercase;
+    position:relative;
+    overflow:hidden;
+    right:110%;
+    animation: sample7 1.4s ease-in-out forwards;
+}
+#one{
+    animation-delay:0.2s;
+}
+#two{
+    animation-delay:.5s;
+}
+#three{
+    animation-delay:.7s;
+}
+#four{
+    animation-delay:.9s;
+}
+
+@keyframes sample7 {
+    0%{
+        right:110%;
+    }
+    100%{
+        right:0%;
+    }
+}
+#one::after{
+    content:" ";
+    position:absolute;
+    top:17.6%;
+    right:0;
+    width:100%;
+    height:68%;
+    background:#fff;
+    box-shadow:inset 0 0 2px gray;
+    overflow: hidden;
+    transition:all .7s ease-in-out;
+    animation:sample3 1.7s ease-in-out forwards;
+    animation-delay:1.8s;
+}
+
+#two::after{
+    content:" ";
+    position:absolute;
+    top:17.6%;
+    right:0;
+    width:100%;
+    height:68%;
+    background:#fff;
+    box-shadow:inset 0 0 2px gray;
+    overflow: hidden;
+    transition:all .7s ease-in-out;
+    animation:sample4 1.7s ease-in-out forwards;
+    animation-delay:1.8s;
+}
+
+#three::after{
+    content:" ";
+    position:absolute;
+    top:17.6%;
+    right:0;
+    width:100%;
+    height:68%;
+    background:#fff;
+    box-shadow:inset 0 0 2px gray;
+    overflow: hidden;
+    transition:all .7s ease-in-out;
+    animation:sample5 1.7s ease-in-out forwards;
+    animation-delay:1.8s;
+}
+
+#four::after{
+    content:" ";
+    position:absolute;
+    top:15%;
+    right:0;
+    width:100%;
+    height:70%;
+    background:#fff;
+    box-shadow:inset 0 0 2px gray;
+    overflow: hidden;
+    transition: all .7s ease-in-out;
+    animation:sample6 1.7s ease-in-out forwards;
+    animation-delay:1.8s;
+}
+
+@keyframes sample6 {
+    0%{
+        width:100%;
+    }
+    100%{
+        width:0%;
+    }
+    
+}
+
+@keyframes sample5 {
+    0%{
+        width:100%;
+    }
+    100%{
+        width:56.74%;
+    }
+    
+}
+
+@keyframes sample4 {
+    0%{
+        width:100%;
+    }
+    100%{
+        width:27%;
+    }
+    
+}
+
+@keyframes sample3 {
+    0%{
+        width:100%;
+    }
+    100%{
+        width:16%;
+    }
+    
+}
+.verticle-text{
+    color:white;
+    transform:rotateZ(90deg);
+    z-index:10;
+    position:absolute;
+    top:26%;
+    left:56%;
+    width:70%;
+}
+.verticle-text marquee{
+    color:transparent;
+    font-size:5vw;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+    font-weight:300;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+/*
+.verticle-text .marquee{
+    position: absolute;
+    left:39%;
+    color:transparent;
+    font-size:4.8vw;
+    -webkit-text-stroke-width: 1.3px;
+    -webkit-text-stroke-color: #fff;
+    font-weight:300;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    animation:marquee 6s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes marquee {
+    0%{
+        transform:translateX(0);
+    }
+    100%{
+        transform:translateX(-100%);
+    }
+}*/
+
+
+

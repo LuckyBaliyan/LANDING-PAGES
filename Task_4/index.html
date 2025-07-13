@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color_Generator</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <div class="wrapper relative w-full h-screen">
+    <div class="main w-[62vw] h-[80vh]  rounded-4xl absolute top-0 left-1/2 -translate-x-1/2 translate-y-1/8 bg-white p-5">
+        <header class="flex justify-between gap-2">
+            <img src="assets/luthfi-alfarizi-AiTgGhF4mvk-unsplash.jpg" alt="" class="w-30 h-30 object-cover rounded-4xl">
+            <h1 class="ml-auto mr-5 mb-5 text-5xl leading-[1.2] font-semibold">
+                Generate Colors On<br>
+                <p class="text-2xl font-light">Entering The Button</p>
+            </h1>
+        </header>
+
+        <main class="flex items-center justify-evenly">
+            <div class="generated-color bg-purple-500">
+                <label for="color1">
+                    <button class="copy px-3 text-center py-[1px] bg-[#979797] rounded-[4px] flex justify-center items-center text-[1rem] leading-[2] text-white cursor-pointer">copy</button>
+                    <p class="color-value">#FFF</p>
+                </label>
+                <input type="color"name="" id="col1" value=" ">
+            </div>
+
+            <div class="generated-color bg-amber-500">
+                <label for="color1">
+                    <button class="copy px-3 text-center py-[1px] bg-[#a2a1a1]  rounded-[4px] flex justify-center items-center text-[1rem] leading-[2] text-white cursor-pointer">copy</button>
+                    <p class="color-value">#FFF</p>
+                </label>
+                <input type="color" name="" id="col2" value=" ">
+            </div>
+
+            <div class="generated-color bg-green-500">
+                <label for="color1">
+                    <button class="copy px-3 text-center py-[1px] bg-[#a3a2a2]  rounded-[4px] flex justify-center items-center text-[1rem] leading-[2] text-white cursor-pointer">copy</button>
+                    <p class="color-value text">#FFF</p>
+                </label>
+                <input type="color" name="" id="col3" value=" ">
+            </div>
+
+            <div class="message fixed top-[90%] w-45 h-10 bg-[#3d373744] text-blue-300 shadow-xl text-center mt-30vh opacity-0 rounded-xl flex items-center justify-center transition-all duration-75 ease-in-out"></div>
+        </main>
+
+        <button id="click" class="absolute left-[42%] bottom-[15%] border-[1px] px-4 py-2 rounded-[24px] bg-[#010101] text-white cursor-pointer"> Generate Colors</button>
+    </div>
+
+  </div>
+
+  <script src="Script.js"></script>
+</body>
+</html>

@@ -146,7 +146,7 @@ label button:hover{
       color:#fff;
       border: none;
       padding:1px 7px;
-      font-size: 16px;
+      font-size: 12px;
     }
 
     main button:hover{
@@ -162,7 +162,6 @@ label button:hover{
         top:50%;
         left:50%;
         transform: translate(-50%,-50%);
-        z-index: 100;
         color:#c5c4c4;
         font-size:8px;
     }
